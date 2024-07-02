@@ -1,0 +1,38 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:pokemon/src/features/pokemon/data/models/pokemon_detail_model.dart';
+
+void main() {
+  group('PokemonDetailModel', () {
+    test('fromJson should create a valid PokemonDetailModel', () {
+      final json = {
+        'weight': 69,
+        'height': 7,
+        'types': [
+          {
+            'type': {'name': 'grass'}
+          }
+        ],
+        'stats': [
+          {
+            'stat': {'name': 'hp'},
+            'base_stat': 45
+          }
+        ],
+        'moves': [
+          {
+            'move': {'name': 'razor-wind'}
+          }
+        ],
+      };
+
+      final details = PokemonDetailModel.fromJson(json);
+
+      expect(details.weight, 69);
+      expect(details.height, 7);
+      expect(details.types.first.name, 'grass');
+      expect(details.stats.first.name, 'hp');
+      expect(details.stats.first.baseStat, 45);
+      expect(details.moves.first.name, 'razor-wind');
+    });
+  });
+}
