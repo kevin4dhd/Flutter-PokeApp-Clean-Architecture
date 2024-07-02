@@ -130,7 +130,7 @@ project_root/
 
 ## Créditos
 
-Desarrollado por [Kevin Piazzoli](https://github.com/tu-usuario).
+Desarrollado por [Kevin Piazzoli](https://github.com/kevin4dhd).
 
 ## Licencia
 
